@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>robbchar.com @ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/styles/reset.css")
+    @Styles.Render("~/styles/main.css")
+</head>
+<body>
+    <div id="sideBar">
+        <nav>
+            @Html.Partial("_LinksPartial")
+        </nav>
+    </div>
+    <section class="content-wrapper main-content clear-fix">
+        <div class="body">
+            @RenderBody()
+        </div>
+        <footer>
+            <span>&copy; @DateTime.Now.Year - robbchar.com</span>
+        </footer>
+    </section>
+</body>
+</html>
